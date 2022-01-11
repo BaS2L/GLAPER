@@ -1,0 +1,39 @@
+.navigation {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 10px 2rem 2rem 10px;
+  top: 0;
+  height: 100%;
+  width: 200px;
+  position: sticky;
+  transition: 0.3s;
+}
+.home,
+.profile,
+.chat {
+  width: 100%;
+  transition: 0.3s;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.HomeIcon,
+.ChatIcon {
+  color: #e7a3c0;
+}
+
+.home:hover,
+.profile:hover,
+.chat:hover {
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.8);
+}

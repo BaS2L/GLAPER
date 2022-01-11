@@ -1,0 +1,126 @@
+.factoryForm {
+  position: relative;
+  left: 5%;
+  width: 90%;
+  margin: 2rem 0rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.3)
+  );
+  color: rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  justify-content: space-between;
+  transition: 0.5s;
+}
+
+.factoryForm:hover {
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.7)
+  );
+  transition: 0.5s;
+}
+
+.factoryForm:hover .factoryInput__feed {
+  transition: 0.5s;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.factoryForm:hover .mediaInput {
+  transition: 0.5s;
+  color: black;
+}
+
+.factoryForm:hover .factoryInput__label {
+  color: black;
+  text-shadow: none;
+}
+
+.factoryForm:hover .feedSubmit {
+  color: black;
+  transition: 0.5s;
+}
+
+/* FEED,미디어 컨테이너 */
+.factoryInput__container {
+  display: flex;
+}
+/* FEED입력창 */
+.factoryInput__feed {
+  width: 87%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 2px solid white;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+
+.factoryInput__label {
+  position: absolute;
+  margin-top: 1.5%;
+  margin-left: 6%;
+  color: white;
+  text-shadow: 2px 4px 6px rgba(155, 103, 140, 1);
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+.factoryInput__feed:focus ~ .factoryInput__label,
+.factoryInput__feed:valid ~ .factoryInput__label {
+  visibility: hidden;
+}
+
+/* 미디어삽입 버튼 */
+.add {
+  margin-top: 15px;
+  margin-left: 6%;
+}
+.mediaInput {
+  display: flex;
+  cursor: pointer;
+  border-radius: 20px;
+  padding-top: 1px;
+  width: 100px;
+  color: white;
+  transition: 0.5s;
+}
+.mediaInput:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+/* 삽입된 미디어 크기 */
+.factoryForm__attachment img,
+.factoryForm__attachment video {
+  margin-left: 25%;
+  width: 50%;
+  height: 50%;
+}
+
+.factoryForm__clear {
+  cursor: pointer;
+  position: relative;
+  width: 50%;
+  left: 50%;
+}
+
+.feedSubmit {
+  margin-top: 10px;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}

@@ -1,0 +1,40 @@
+.C_List {
+  color: white;
+  margin-top: 10px;
+  position: relative;
+  left: 5%;
+  width: 90%;
+  margin: 2rem 0rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.3)
+  );
+  color: rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  justify-content: space-between;
+  transition: 0.5s;
+}
+.CommentUser {
+  color: white;
+}
+.commentDate {
+  color: white;
+}
+.commentText h4 {
+  color: white;
+}
+.profileInfo {
+  display: flex;
+}
+
+.comment__actions {
+  color: white;
+  cursor: pointer;
+}

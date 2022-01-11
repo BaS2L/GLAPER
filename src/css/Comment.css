@@ -1,0 +1,44 @@
+.comment_form {
+  display: flex;
+}
+.user {
+  margin-top: 20px;
+}
+.comment {
+  margin-top: 1%;
+  width: 90%;
+}
+.commentInput {
+  width: 96%;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 2px solid white;
+  margin-left: 40px;
+  transition: 0.5s;
+  font-size: 30px;
+}
+
+.commentLabel {
+  position: absolute;
+  left: 8%;
+  margin-top: 30px;
+  color: white;
+  text-shadow: 2px 4px 4px rgba(169, 148, 155, 1);
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+.commentInput:focus ~ .commentLabel {
+  visibility: hidden;
+}
+
+.commentSubmit {
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  transition: 0.5s;
+  margin-top: 20px;
+}

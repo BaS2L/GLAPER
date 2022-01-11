@@ -1,0 +1,160 @@
+@import "antd/dist/antd.css";
+.feed {
+  position: relative;
+  left: 5%;
+  width: 90%;
+  margin: 2rem 0rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.3)
+  );
+  justify-content: space-between;
+  transition: 0.5s;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 2px 8px 0 rgba(255, 230, 235, 0.5);
+}
+
+.feedinfoLeft {
+  width: 50%;
+  display: flex;
+}
+.feedinfoRight {
+  width: 50%;
+}
+
+/* 수정/삭제 버튼 */
+.feed__actions {
+  padding-left: 90%;
+  cursor: pointer;
+  color: white;
+  transition: 0.5s;
+}
+
+.actions {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.feed__actions span {
+  cursor: pointer;
+}
+
+.del,
+.tnwjd {
+  transition: 0.5s;
+  color: white;
+}
+
+.feedinfo {
+  display: flex;
+  font-size: small;
+}
+
+/* 글쓴이 정보 */
+.userinfo {
+  margin-left: 10px;
+  display: flex;
+}
+
+/*시간데이터 */
+.timedata {
+  color: white;
+  text-shadow: 2px 4px 4px rgba(155, 103, 140, 0.5);
+  padding-left: 10px;
+  margin-top: 10px;
+  font-size: medium;
+}
+
+/* 유저이름 */
+.feed_user_name {
+  color: white;
+  text-shadow: 2px 4px 4px rgba(155, 103, 140, 0.5);
+  font-size: x-large;
+  font-weight: bold;
+}
+
+/* feed 텍스트 */
+.feed > h4 {
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+  text-shadow: 2px 4px 4px rgba(155, 103, 140, 0.5);
+  margin-left: 3.5%;
+  font-size: larger;
+}
+
+.feed_btn {
+  border-top: 2px solid rgba(255, 255, 255, 1);
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  transition: 0.5s;
+}
+
+.likesec,
+.commentsec {
+  position: relative;
+  width: 50%;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 4px 4px rgba(155, 103, 140, 0.5);
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.likesec:hover,
+.commentsec:hover {
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.media {
+  width: 100%;
+}
+
+.media > img,
+.media > video {
+  margin-left: 30%;
+  width: 40%;
+  height: 40%;
+}
+
+.feedEditInput {
+  width: 90%;
+  height: 40px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  outline: none;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+
+.feedEditInputLabel {
+  position: absolute;
+  color: white;
+  bottom: 65%;
+  left: 5%;
+  text-shadow: 2px 4px 6px rgba(155, 103, 140, 1);
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+.feedEditInput:focus ~ .feedEditInputLabel,
+.feedEditInput:valid ~ .feedEditInputLabel {
+  visibility: hidden;
+}
+
+.commentSection {
+  margin-top: 10px;
+}

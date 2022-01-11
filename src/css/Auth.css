@@ -1,0 +1,237 @@
+@import "antd/dist/antd.css";
+@import "./Animation.css";
+
+.auth {
+  background-image: url(../Assets/auth_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.auth_main {
+  height: 95vh;
+  display: flex;
+}
+
+.auth_left {
+  position: relative;
+  width: 50%;
+}
+
+.auth_right {
+  position: relative;
+  width: 50%;
+}
+
+/*! 로그인 전체 */
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(129, 93, 173, 0.6);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+/* 로그인,회원가입 나오는 부분 */
+.head {
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+.login h1 {
+  cursor: default;
+  text-align: center;
+  padding: 20px 0;
+  transition: 0.5s;
+  color: white;
+  text-shadow: 2px 4px 4px rgb(129, 93, 173);
+}
+.login form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .signInput {
+  position: relative;
+  border-bottom: 2px solid white;
+  margin: 30px 0;
+}
+.signInput input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+}
+.signInput label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: white;
+  text-shadow: 2px 4px 4px rgb(142, 111, 174);
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+  font-weight: lighter;
+}
+.signInput span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: rgb(129, 101, 240);
+  transition: 0.5s;
+}
+.signInput input:focus ~ label,
+.signInput input:valid ~ label {
+  top: -5px;
+}
+.signInput input:focus ~ span::before,
+.signInput input:valid ~ span::before {
+  width: 100%;
+}
+
+input[type="email"],
+input[type="password"] {
+  color: white;
+}
+
+/* 로그인/회원가입 버튼 */
+.login_submit {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px 0 rgba(165, 132, 201, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  text-shadow: 2px 4px 4px rgb(142, 111, 174);
+}
+.login_submit:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+}
+.signup_link {
+  color: white;
+  margin: 30px 0;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  margin-left: 10px;
+  text-shadow: 2px 4px 4px rgb(142, 111, 174);
+}
+.signup_link div {
+  text-decoration: none;
+  transition: 0.3s;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/*! 로그인 에러 */
+.err {
+  font-size: 12px;
+  letter-spacing: -0.6px;
+  background-color: #ff6060;
+  color: white;
+  padding: 6px 14px;
+  width: 100%;
+}
+
+.social {
+  margin-bottom: 50px;
+  left: 50%;
+}
+.social_icon {
+  position: absolute;
+  top: 6px;
+  left: 16px;
+}
+.social > button {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px 0 rgba(165, 132, 201, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  text-shadow: 2px 4px 4px rgb(142, 111, 174);
+}
+
+.social > button:hover {
+  /* background-color: rgba */
+  transition: 0.3s;
+  transform: scale(1.05);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 10px;
+}
+
+.auth_logo {
+  position: relative;
+  left: 20%;
+  top: 30%;
+  font-size: 100px;
+  color: white;
+}
+
+.auth_bottom {
+  position: relative;
+  bottom: 0;
+  height: 5vh;
+  background: linear-gradient(
+    -45deg,
+    rgba(245, 224, 84, 0.5),
+    rgba(231, 84, 133, 0.5),
+    rgba(219, 169, 238, 0.5),
+    rgba(164, 109, 248, 0.5)
+  );
+  background-size: 400% 400%;
+  animation: themeSelBtnAni 5s ease-in infinite;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: 1s;
+}
+
+.auth_bottom:hover {
+}
+
+.themeSel {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  border: 0;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
